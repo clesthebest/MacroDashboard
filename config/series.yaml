@@ -1,0 +1,379 @@
+app:
+  title: US Macro Dashboard
+  source_name: FRED
+  source_url: https://fred.stlouisfed.org/
+
+series:
+  - id: DFF
+    label: Effective Federal Funds Rate
+    page: Rates
+    category: Policy
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change, pct_change]
+    default_transform: level
+    notes: Effective daily policy rate.
+
+  - id: GS10
+    label: 10-Year Treasury Yield
+    page: Rates
+    category: Treasuries
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change, pct_change]
+    default_transform: level
+    notes: Constant maturity 10-year Treasury yield.
+
+  - id: DGS1MO
+    label: 1-Month Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 1-month constant maturity Treasury yield.
+
+  - id: DGS3MO
+    label: 3-Month Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 3-month constant maturity Treasury yield.
+
+  - id: DGS6MO
+    label: 6-Month Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 6-month constant maturity Treasury yield.
+
+  - id: DGS1
+    label: 1-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 1-year constant maturity Treasury yield.
+
+  - id: DGS2
+    label: 2-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 2-year constant maturity Treasury yield.
+
+  - id: DGS3
+    label: 3-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 3-year constant maturity Treasury yield.
+
+  - id: DGS5
+    label: 5-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 5-year constant maturity Treasury yield.
+
+  - id: DGS7
+    label: 7-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 7-year constant maturity Treasury yield.
+
+  - id: DGS10
+    label: 10-Year Treasury Yield Curve Point
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 10-year constant maturity Treasury yield.
+
+  - id: DGS20
+    label: 20-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 20-year constant maturity Treasury yield.
+
+  - id: DGS30
+    label: 30-Year Treasury Yield
+    page: Rates
+    category: Treasury Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: 30-year constant maturity Treasury yield.
+
+  - id: MORTGAGE30US
+    label: 30-Year Mortgage Rate
+    page: Rates
+    category: Credit
+    frequency: weekly
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Freddie Mac 30-year fixed mortgage rate.
+
+  - id: T10Y2Y
+    label: 10Y minus 2Y Treasury Spread
+    page: Rates
+    category: Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Yield curve slope between 10-year and 2-year Treasuries.
+
+  - id: T10Y3M
+    label: 10Y minus 3M Treasury Spread
+    page: Rates
+    category: Curve
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Yield curve slope between 10-year and 3-month Treasuries.
+
+  - id: BAMLH0A0HYM2
+    label: High Yield OAS
+    page: Rates
+    category: Credit
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: ICE BofA U.S. High Yield Index Option-Adjusted Spread.
+
+  - id: CPIAUCSL
+    label: CPI (All Urban Consumers)
+    page: Inflation
+    category: Prices
+    frequency: monthly
+    format: index
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Headline CPI index.
+
+  - id: PCEPI
+    label: PCE Price Index
+    page: Inflation
+    category: Prices
+    frequency: monthly
+    format: index
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Headline PCE price index.
+
+  - id: PCEPILFE
+    label: Core PCE Price Index
+    page: Inflation
+    category: Core
+    frequency: monthly
+    format: index
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Core PCE excluding food and energy.
+
+  - id: T5YIE
+    label: 5-Year Breakeven Inflation
+    page: Inflation
+    category: Expectations
+    frequency: daily
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Treasury breakeven inflation rate.
+
+  - id: UNRATE
+    label: Unemployment Rate
+    page: Labor
+    category: Labor Market
+    frequency: monthly
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Civilian unemployment rate.
+
+  - id: PAYEMS
+    label: Nonfarm Payrolls
+    page: Labor
+    category: Employment
+    frequency: monthly
+    format: integer
+    source: FRED
+    transforms: [level, change, yoy]
+    default_transform: change
+    notes: Total nonfarm payroll employment.
+
+  - id: ICSA
+    label: Initial Jobless Claims
+    page: Labor
+    category: Claims
+    frequency: weekly
+    format: integer
+    source: FRED
+    transforms: [level, change, pct_change]
+    default_transform: level
+    notes: Weekly initial unemployment claims.
+
+  - id: CIVPART
+    label: Labor Force Participation Rate
+    page: Labor
+    category: Labor Market
+    frequency: monthly
+    format: percent
+    source: FRED
+    transforms: [level, change]
+    default_transform: level
+    notes: Labor force participation rate.
+
+  - id: GDPC1
+    label: Real GDP
+    page: Growth
+    category: Output
+    frequency: quarterly
+    format: currency_billions
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Real gross domestic product, chained dollars.
+
+  - id: GDP
+    label: Nominal GDP
+    page: Growth
+    category: Output
+    frequency: quarterly
+    format: currency_billions
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Nominal gross domestic product.
+
+  - id: INDPRO
+    label: Industrial Production
+    page: Growth
+    category: Activity
+    frequency: monthly
+    format: index
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Industrial production index.
+
+  - id: RSAFS
+    label: Retail Sales
+    page: Growth
+    category: Consumption
+    frequency: monthly
+    format: currency_billions
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: Advance retail and food services sales.
+
+  - id: HOUST
+    label: Housing Starts
+    page: Growth
+    category: Housing
+    frequency: monthly
+    format: integer
+    source: FRED
+    transforms: [level, yoy, pct_change]
+    default_transform: yoy
+    notes: New privately-owned housing starts.
+
+  - id: SP500
+    label: S&P 500
+    page: Markets
+    category: Equities
+    frequency: daily
+    format: index
+    source: FRED
+    transforms: [level, indexed_100, pct_change]
+    default_transform: level
+    notes: S&P 500 index level.
+
+  - id: NASDAQCOM
+    label: Nasdaq Composite
+    page: Markets
+    category: Equities
+    frequency: daily
+    format: index
+    source: FRED
+    transforms: [level, indexed_100, pct_change]
+    default_transform: level
+    notes: Nasdaq Composite index level.
+
+  - id: DJIA
+    label: Dow Jones Industrial Average
+    page: Markets
+    category: Equities
+    frequency: daily
+    format: index
+    source: FRED
+    transforms: [level, indexed_100, pct_change]
+    default_transform: level
+    notes: Dow Jones Industrial Average.
+
+  - id: VIXCLS
+    label: VIX
+    page: Markets
+    category: Volatility
+    frequency: daily
+    format: index
+    source: FRED
+    transforms: [level, pct_change]
+    default_transform: level
+    notes: CBOE Volatility Index close.
